@@ -1,0 +1,17 @@
+
+
+
+
+.menu li{position:relative; float:left; border-right:0px solid #c0c0c0; }
+
+.menu li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+
+
+.menu li   ul{position:absolute; top:65px; left:0; background-color:#fff; display:none; }
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+
+
+
