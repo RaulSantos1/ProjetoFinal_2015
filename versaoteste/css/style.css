@@ -181,6 +181,7 @@ ul.about-list li span{
 /* Team Section */
 #tf-team{
 	//background: url(03.jpg);
+        background-color: #d8d8d8;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
