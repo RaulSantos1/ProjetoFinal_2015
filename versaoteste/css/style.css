@@ -76,7 +76,7 @@ ul, ol{
 	transition: all 0.8s;
 }
 #tf-menu.navbar-default {
-    background-color: #ffffff;
+        background-color: #ffffff;
 	border-color: rgba(231, 231, 231, 0);
 }
 #tf-menu a.navbar-brand {
@@ -115,6 +115,7 @@ font-weight: 900;
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
 	}
+        
 /* Home Style */
 #tf-home{
 	background: url(../img/bg_1.jpg);
@@ -135,9 +136,6 @@ font-weight: 900;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
 	height: 750px;
 	background-attachment: fixed;
-}
-#tf-home p.lead{
-	//color: #e3e3e3;
 }
 
 .content{
@@ -180,7 +178,6 @@ ul.about-list li span{
 
 /* Team Section */
 #tf-team{
-	//background: url(03.jpg);
         background-color: #d8d8d8;
 	background-size: cover;
 	background-position: center;
@@ -307,7 +304,6 @@ img.img-circle.team-img {
 
 /* Clients Section */
 #tf-clients{
-	//background: url(04.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -445,7 +441,6 @@ ol.type li a.active { font-weight: 700; }
 }
 /* Testimonials Section */
 #tf-testimonials{
-	//background: url(05.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -481,7 +476,6 @@ ol.type li a.active { font-weight: 700; }
 /* Contact Section */
 /* Team Section */
 #tf-contact{
-	//background: url(03.jpg);
         background-color: #d8d8d8;
 	background-size: cover;
 	background-position: center;
