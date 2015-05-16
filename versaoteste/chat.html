@@ -1,193 +1,335 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html><head>
+<html lang="en"><head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>INSPINIA | Dashboard</title>
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Toastr style -->
-        <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-        <!-- Gritter -->
-        <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="../dist/css/timeline.css" rel="stylesheet">
 
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-        <style type="text/css"></style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+    <!-- Morris Charts CSS -->
+    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
-    <body class="pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);">
-                <div class="pace-progress-inner"></div>
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css"></style></head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
             </div>
-            <div class="pace-activity"></div></div>
-        <div id="wrapper">
-            <nav class="navbar-default navbar-static-side" role="navigation">
-                <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="nav-header">
-                            <div class="dropdown profile-element"> <span>
-                                    <img alt="image" class="img-circle" src="img/profile_small.jpg">
-                                </span>
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                                        </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                    <li><a href="mailbox.html">Mailbox</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="login.html">Logout</a></li>
-                                </ul>
-                            </div>
-                            <div class="logo-element">
-                                IN+
-                            </div>
-                        </li>
-                        <li class="active">
-                            <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse in">
-                                <li class="active"><a href="index.html">Dashboard v.1</a></li>
-                                <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                                <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                                <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span> <span class="label label-primary pull-right">NEW</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="graph_flot.html">Flot Charts</a></li>
-                                <li><a href="graph_morris.html">Morris.js Charts</a></li>
-                                <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
-                                <li><a href="graph_chartjs.html">Chart.js</a></li>
-                                <li><a href="graph_peity.html">Peity Charts</a></li>
-                                <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="mailbox.html">Inbox</a></li>
-                                <li><a href="mail_detail.html">Email view</a></li>
-                                <li><a href="mail_compose.html">Compose email</a></li>
-                                <li><a href="email_template.html">Email templates</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span> </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="form_basic.html">Basic form</a></li>
-                                <li><a href="form_advanced.html">Advanced Plugins</a></li>
-                                <li><a href="form_wizard.html">Wizard</a></li>
-                                <li><a href="form_file_upload.html">File Upload</a></li>
-                                <li><a href="form_editors.html">Text Editor</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">App Views</span>  <span class="pull-right label label-primary">SPECIAL</span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="contacts.html">Contacts</a></li>
-                                <li><a href="profile.html">Profile</a></li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="project_detail.html">Project detail</a></li>
-                                <li><a href="teams_board.html">Teams board</a></li>
-                                <li><a href="clients.html">Clients</a></li>
-                                <li><a href="full_height.html">Outlook view</a></li>
-                                <li><a href="file_manager.html">File manager</a></li>
-                                <li><a href="calendar.html">Calendar</a></li>
-                                <li><a href="issue_tracker.html">Issue tracker</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="article.html">Article</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="timeline.html">Timeline</a></li>
-                                <li><a href="pin_board.html">Pin board</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="search_results.html">Search results</a></li>
-                                <li><a href="lockscreen.html">Lockscreen</a></li>
-                                <li><a href="invoice.html">Invoice</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="login_two_columns.html">Login v.2</a></li>
-                                <li><a href="forgot_password.html">Forget password</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="404.html">404 Page</a></li>
-                                <li><a href="500.html">500 Page</a></li>
-                                <li><a href="empty_page.html">Empty page</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Miscellaneous</span><span class="label label-info pull-right">NEW</span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="toastr_notifications.html">Notification</a></li>
-                                <li><a href="nestable_list.html">Nestable list</a></li>
-                                <li><a href="agile_board.html">Agile board</a></li>
-                                <li><a href="timeline_2.html">Timeline v.2</a></li>
-                                <li><a href="diff.html">Diff</a></li>
-                                <li><a href="idle_timer.html">Idle timer</a></li>
-                                <li><a href="spinners.html">Spinners</a></li>
-                                <li><a href="tinycon.html">Live favicon</a></li>
-                                <li><a href="google_maps.html">Google maps</a></li>
-                                <li><a href="code_editor.html">Code editor</a></li>
-                                <li><a href="modal_window.html">Modal window</a></li>
-                                <li><a href="forum_main.html">Forum view</a></li>
-                                <li><a href="validation.html">Validation</a></li>
-                                <li><a href="tree_view.html">Tree view</a></li>
-                                <li><a href="chat_view.html">Chat view</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI Elements</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="icons.html">Icons</a></li>
-                                <li><a href="draggable_panels.html">Draggable Panels</a></li>
-                                <li><a href="buttons.html">Buttons</a></li>
-                                <li><a href="video.html">Video</a></li>
-                                <li><a href="tabs_panels.html">Tabs &amp; Panels</a></li>
-                                <li><a href="notifications.html">Notifications &amp; Tooltips</a></li>
-                                <li><a href="badges_labels.html">Badges, Labels, Progress</a></li>
-                            </ul>
-                        </li>
+            <!-- /.navbar-header -->
 
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
                         <li>
-                            <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="table_basic.html">Static Tables</a></li>
-                                <li><a href="table_data_tables.html">Data Tables</a></li>
-                                <li><a href="jq_grid.html">jqGrid</a></li>
-                            </ul>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Gallery</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="basic_gallery.html">Lightbox Gallery</a></li>
-                                <li><a href="carousel.html">Bootstrap Carusela</a></li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
 
-                            </ul>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav in" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span class="fa arrow"></span></a>
+                            <a href="index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
                                 <li>
                                     <a href="#">Third Level <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level collapse">
@@ -200,1530 +342,607 @@ and open the template in the editor.
                                         <li>
                                             <a href="#">Third Level Item</a>
                                         </li>
-
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
                                     </ul>
+                                    <!-- /.nav-third-level -->
                                 </li>
-                                <li><a href="#">Second Level Item</a></li>
-                                <li>
-                                    <a href="#">Second Level Item</a></li>
-                                <li>
-                                    <a href="#">Second Level Item</a></li>
                             </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS Animations </span><span class="label label-info pull-right">62</span></a>
-                        </li>
-                        <li class="landing_link">
-                            <a target="_blank" href="Landing_page/index.html"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning pull-right">NEW</span></a>
-                        </li>
-                        <li class="special_link">
-                            <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                     </ul>
-
                 </div>
-            </nav>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
 
-            <div id="page-wrapper" class="gray-bg dashbard-1" style="min-height: 911px;">
-                <div class="row border-bottom">
-                    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                        <div class="navbar-header">
-                            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                            <form role="search" class="navbar-form-custom" action="search_results.html">
-                                <div class="form-group">
-                                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-                                </div>
-                            </form>
-                        </div>
-                        <ul class="nav navbar-top-links navbar-right">
-                            <li>
-                                <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-messages">
-                                    <li>
-                                        <div class="dropdown-messages-box">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a7.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <small class="pull-right">46h ago</small>
-                                                <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                                <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <div class="dropdown-messages-box">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a4.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right text-navy">5h ago</small>
-                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <div class="dropdown-messages-box">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/profile.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">23h ago</small>
-                                                <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                                <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <div class="text-center link-block">
-                                            <a href="mailbox.html">
-                                                <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-alerts">
-                                    <li>
-                                        <a href="mailbox.html">
-                                            <div>
-                                                <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                                <span class="pull-right text-muted small">4 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="profile.html">
-                                            <div>
-                                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                                <span class="pull-right text-muted small">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="grid_options.html">
-                                            <div>
-                                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                                <span class="pull-right text-muted small">4 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <div class="text-center link-block">
-                                            <a href="notifications.html">
-                                                <strong>See All Alerts</strong>
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li>
-                                <a href="login.html">
-                                    <i class="fa fa-sign-out"></i> Log out
-                                </a>
-                            </li>
-                            <li>
-                                <a class="right-sidebar-toggle">
-                                    <i class="fa fa-tasks"></i>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </nav>
+        <div id="page-wrapper" style="min-height: 151px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
                 </div>
-                <div class="row  border-bottom white-bg dashboard-header">
-
-                    <div class="col-sm-3">
-                        <h2>Welcome Amelia</h2>
-                        <small>You have 42 messages and 6 notifications.</small>
-                        <ul class="list-group clear-list m-t">
-                            <li class="list-group-item fist-item">
-                                <span class="pull-right">
-                                    09:00 pm
-                                </span>
-                                <span class="label label-success">1</span> Please contact me
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right">
-                                    10:16 am
-                                </span>
-                                <span class="label label-info">2</span> Sign a contract
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right">
-                                    08:22 pm
-                                </span>
-                                <span class="label label-primary">3</span> Open new shop
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right">
-                                    11:06 pm
-                                </span>
-                                <span class="label label-default">4</span> Call back to Sylvia
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right">
-                                    12:00 am
-                                </span>
-                                <span class="label label-primary">5</span> Write a letter to Sandra
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="flot-chart dashboard-chart">
-                            <div class="flot-chart-content" id="flot-dashboard-chart" style="padding: 0px; position: relative;"><canvas class="flot-base" width="792" height="180" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 792px; height: 180px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 15px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 111px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 207px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 303px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 399px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 492px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 588px; text-align: center;">12</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 684px; text-align: center;">14</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 164px; left: 780px; text-align: center;">16</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 152px; left: 7px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 114px; left: 1px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 76px; left: 1px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 38px; left: 1px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">40</div></div></div><canvas class="flot-overlay" width="792" height="180" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 792px; height: 180px;"></canvas></div>
-                        </div>
-                        <div class="row text-left">
-                            <div class="col-xs-4">
-                                <div class=" m-l-md">
-                                    <span class="h4 font-bold m-t block">$ 406,100</span>
-                                    <small class="text-muted m-b block">Sales marketing report</small>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div>New Comments!</div>
                                 </div>
                             </div>
-                            <div class="col-xs-4">
-                                <span class="h4 font-bold m-t block">$ 150,401</span>
-                                <small class="text-muted m-b block">Annual sales revenue</small>
-                            </div>
-                            <div class="col-xs-4">
-                                <span class="h4 font-bold m-t block">$ 16,822</span>
-                                <small class="text-muted m-b block">Half-year revenue margin</small>
-                            </div>
-
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="statistic-box">
-                            <h4>
-                                Project Beta progress
-                            </h4>
-                            <p>
-                                You have two project with not compleated task.
-                            </p>
-                            <div class="row text-center">
-                                <div class="col-lg-6">
-                                    <canvas id="polarChart" width="80" height="80" style="width: 80px; height: 80px;"></canvas>
-                                    <h5>Kolter</h5>
-                                </div>
-                                <div class="col-lg-6">
-                                    <canvas id="doughnutChart" width="78" height="78" style="width: 78px; height: 78px;"></canvas>
-                                    <h5>Maxtor</h5>
-                                </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="m-t">
-                                <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
-
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="wrapper wrapper-content">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>New Tasks!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>New Orders!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">13</div>
+                                    <div>Support Tickets!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="352" version="1.1" width="1019" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="50.5" y="318" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,318H994" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="244.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,244.75H994" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="171.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,171.5H994" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="98.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">22,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,98.25H994" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,25H994" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="994" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012-06</tspan></text><text x="889.9689635967799" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012-03</tspan></text><text x="787.0220748316541" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011-12</tspan></text><text x="684.0280492126981" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011-09</tspan></text><text x="613.8884107133816" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011-07</tspan></text><text x="510.9415219482558" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011-04</tspan></text><text x="409.1730545288846" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011-01</tspan></text><text x="305.0477444180042" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010-10</tspan></text><text x="200.96957116095388" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010-07</tspan></text><text x="98.02268239582806" y="330.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010-04</tspan></text><path fill="#7cb47c" stroke="none" d="M63,266.1097C89.00775910080502,260.7380333333333,141.02327730241507,249.58947900906003,167.03103640322007,244.62303333333335C193.05057971748266,239.65433734239338,245.0896663460078,233.16796055846424,271.1092096602704,226.36913333333334C296.85771606500936,219.6411272251309,348.35472887448736,192.52324732451092,374.10323527922634,190.51569999999998C399.5571363475267,188.5311223245109,450.46493848412734,208.9405312037249,475.9188395524277,210.40063333333333C501.92659865323276,211.8925062037249,553.9421168548428,201.33006675349188,579.9498759556478,202.3236C605.9694192699104,203.31758342015854,658.0085058984355,235.98715235602094,684.0280492126981,218.35070000000002C709.7765556174371,200.8979606893543,761.2735684269151,70.48043152513925,787.0220748316541,61.96683333333334C812.7587970229356,53.457131525139246,864.2322414054984,137.7742853791847,889.9689635967799,150.2575C915.9767226975849,162.87217704585134,967.9922408991949,159.33317499999998,994,162.3584L994,318L63,318Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#4da74d" d="M63,266.1097C89.00775910080502,260.7380333333333,141.02327730241507,249.58947900906003,167.03103640322007,244.62303333333335C193.05057971748266,239.65433734239338,245.0896663460078,233.16796055846424,271.1092096602704,226.36913333333334C296.85771606500936,219.6411272251309,348.35472887448736,192.52324732451092,374.10323527922634,190.51569999999998C399.5571363475267,188.5311223245109,450.46493848412734,208.9405312037249,475.9188395524277,210.40063333333333C501.92659865323276,211.8925062037249,553.9421168548428,201.33006675349188,579.9498759556478,202.3236C605.9694192699104,203.31758342015854,658.0085058984355,235.98715235602094,684.0280492126981,218.35070000000002C709.7765556174371,200.8979606893543,761.2735684269151,70.48043152513925,787.0220748316541,61.96683333333334C812.7587970229356,53.457131525139246,864.2322414054984,137.7742853791847,889.9689635967799,150.2575C915.9767226975849,162.87217704585134,967.9922408991949,159.33317499999998,994,162.3584" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="266.1097" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="167.03103640322007" cy="244.62303333333335" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="271.1092096602704" cy="226.36913333333334" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="374.10323527922634" cy="190.51569999999998" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="475.9188395524277" cy="210.40063333333333" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="579.9498759556478" cy="202.3236" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="684.0280492126981" cy="218.35070000000002" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="787.0220748316541" cy="61.96683333333334" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="889.9689635967799" cy="150.2575" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="994" cy="162.3584" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#a7b3bc" stroke="none" d="M63,291.96206666666666C89.00775910080502,286.0874166666666,141.02327730241507,273.60811363722155,167.03103640322007,268.46346666666665C193.05057971748266,263.3164886372216,245.0896663460078,253.60836666666668,271.1092096602704,250.79556666666667C296.85771606500936,248.01206666666667,348.35472887448736,248.34120839087072,374.10323527922634,246.07826666666665C399.5571363475267,243.84121672420406,450.46493848412734,235.93439688573392,475.9188395524277,232.7956C501.92659865323276,229.58850521906726,553.9421168548428,220.5616593072858,579.9498759556478,220.6947C605.9694192699104,220.82780097395244,658.0085058984355,247.45413944153577,684.0280492126981,233.86016666666666C709.7765556174371,220.4077977748691,761.2735684269151,120.48564190890363,787.0220748316541,112.50933333333333C812.7587970229356,104.53667524223697,864.2322414054984,161.69074568435437,889.9689635967799,170.0643C915.9767226975849,178.52603735102105,967.9922408991949,177.40395,994,179.8505L994,318L63,318Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#7a92a3" d="M63,291.96206666666666C89.00775910080502,286.0874166666666,141.02327730241507,273.60811363722155,167.03103640322007,268.46346666666665C193.05057971748266,263.3164886372216,245.0896663460078,253.60836666666668,271.1092096602704,250.79556666666667C296.85771606500936,248.01206666666667,348.35472887448736,248.34120839087072,374.10323527922634,246.07826666666665C399.5571363475267,243.84121672420406,450.46493848412734,235.93439688573392,475.9188395524277,232.7956C501.92659865323276,229.58850521906726,553.9421168548428,220.5616593072858,579.9498759556478,220.6947C605.9694192699104,220.82780097395244,658.0085058984355,247.45413944153577,684.0280492126981,233.86016666666666C709.7765556174371,220.4077977748691,761.2735684269151,120.48564190890363,787.0220748316541,112.50933333333333C812.7587970229356,104.53667524223697,864.2322414054984,161.69074568435437,889.9689635967799,170.0643C915.9767226975849,178.52603735102105,967.9922408991949,177.40395,994,179.8505" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="291.96206666666666" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="167.03103640322007" cy="268.46346666666665" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="271.1092096602704" cy="250.79556666666667" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="374.10323527922634" cy="246.07826666666665" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="475.9188395524277" cy="232.7956" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="579.9498759556478" cy="220.6947" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="684.0280492126981" cy="233.86016666666666" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="787.0220748316541" cy="112.50933333333333" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="889.9689635967799" cy="170.0643" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="994" cy="179.8505" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#2577b5" stroke="none" d="M63,291.96206666666666C89.00775910080502,291.6886,141.02327730241507,293.60957060400153,167.03103640322007,290.8682C193.05057971748266,288.1255872706682,245.0896663460078,271.23985898778363,271.1092096602704,270.02613333333335C296.85771606500936,268.8250506544503,348.35472887448736,283.53944056386655,374.10323527922634,281.2089666666667C399.5571363475267,278.90515723053323,450.46493848412734,253.78724181360204,475.9188395524277,251.489C501.92659865323276,249.14075014693535,553.9421168548428,260.19409194035484,579.9498759556478,262.623C605.9694192699104,265.0530086070215,658.0085058984355,282.4642645724258,684.0280492126981,270.92466666666667C709.7765556174371,259.50527290575917,761.2735684269151,177.9513019207294,787.0220748316541,170.78703333333334C812.7587970229356,163.62604358739605,864.2322414054984,205.5585464283003,889.9689635967799,213.62363333333332C915.9767226975849,221.77365476163362,967.9922408991949,230.14150833333332,994,235.64746666666667L994,318L63,318Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#0b62a4" d="M63,291.96206666666666C89.00775910080502,291.6886,141.02327730241507,293.60957060400153,167.03103640322007,290.8682C193.05057971748266,288.1255872706682,245.0896663460078,271.23985898778363,271.1092096602704,270.02613333333335C296.85771606500936,268.8250506544503,348.35472887448736,283.53944056386655,374.10323527922634,281.2089666666667C399.5571363475267,278.90515723053323,450.46493848412734,253.78724181360204,475.9188395524277,251.489C501.92659865323276,249.14075014693535,553.9421168548428,260.19409194035484,579.9498759556478,262.623C605.9694192699104,265.0530086070215,658.0085058984355,282.4642645724258,684.0280492126981,270.92466666666667C709.7765556174371,259.50527290575917,761.2735684269151,177.9513019207294,787.0220748316541,170.78703333333334C812.7587970229356,163.62604358739605,864.2322414054984,205.5585464283003,889.9689635967799,213.62363333333332C915.9767226975849,221.77365476163362,967.9922408991949,230.14150833333332,994,235.64746666666667" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="291.96206666666666" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="167.03103640322007" cy="290.8682" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="271.1092096602704" cy="270.02613333333335" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="374.10323527922634" cy="281.2089666666667" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="475.9188395524277" cy="251.489" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="579.9498759556478" cy="262.623" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="684.0280492126981" cy="270.92466666666667" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="787.0220748316541" cy="170.78703333333334" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="889.9689635967799" cy="213.62363333333332" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="994" cy="235.64746666666667" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 109.53103640322px; top: 177px; display: none;"><div class="morris-hover-row-label">2010 Q2</div><div class="morris-hover-point" style="color: #0b62a4">
+  iPhone:
+  2,778
+</div><div class="morris-hover-point" style="color: #7A92A3">
+  iPad:
+  2,294
+</div><div class="morris-hover-point" style="color: #4da74d">
+  iPod Touch:
+  2,441
+</div></div></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Action</a>
+                                        </li>
+                                        <li><a href="#">Another action</a>
+                                        </li>
+                                        <li><a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="ibox float-e-margins">
-                                        <div class="ibox-title">
-                                            <h5>New data for the report</h5> <span class="label label-primary">IN+</span>
-                                            <div class="ibox-tools">
-                                                <a class="collapse-link">
-                                                    <i class="fa fa-chevron-up"></i>
-                                                </a>
-                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                    <i class="fa fa-wrench"></i>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-user">
-                                                    <li><a href="#">Config option 1</a>
-                                                    </li>
-                                                    <li><a href="#">Config option 2</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="close-link">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="ibox-content">
-                                            <div>
-
-                                                <div class="pull-right text-right">
-
-                                                    <span class="bar_dashboard" style="display: none;">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span><svg class="peity" height="16" width="100"><rect fill="#1ab394" x="0" y="7.111111111111111" width="2.2580645161290325" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="3.2580645161290325" y="10.666666666666668" width="2.2580645161290325" height="5.333333333333333"></rect><rect fill="#1ab394" x="6.516129032258065" y="0" width="2.2580645161290325" height="16"></rect><rect fill="#d7d7d7" x="9.774193548387098" y="5.333333333333334" width="2.2580645161290325" height="10.666666666666666"></rect><rect fill="#1ab394" x="13.03225806451613" y="7.111111111111111" width="2.2580645161290325" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="16.290322580645164" y="0" width="2.2580645161290325" height="16"></rect><rect fill="#1ab394" x="19.548387096774196" y="3.555555555555557" width="2.2580645161290325" height="12.444444444444443"></rect><rect fill="#d7d7d7" x="22.806451612903228" y="10.666666666666668" width="2.2580645161290325" height="5.333333333333333"></rect><rect fill="#1ab394" x="26.06451612903226" y="7.111111111111111" width="2.2580645161290325" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="29.322580645161292" y="12.444444444444445" width="2.2580645161290325" height="3.5555555555555554"></rect><rect fill="#1ab394" x="32.58064516129033" y="8.88888888888889" width="2.2580645161290325" height="7.111111111111111"></rect><rect fill="#d7d7d7" x="35.83870967741936" y="3.555555555555557" width="2.2580645161290325" height="12.444444444444443"></rect><rect fill="#1ab394" x="39.09677419354839" y="10.666666666666668" width="2.2580645161290325" height="5.333333333333333"></rect><rect fill="#d7d7d7" x="42.35483870967742" y="12.444444444444445" width="2.2580645161290325" height="3.5555555555555554"></rect><rect fill="#1ab394" x="45.612903225806456" y="3.555555555555557" width="2.2580645161290325" height="12.444444444444443"></rect><rect fill="#d7d7d7" x="48.87096774193549" y="0" width="2.2580645161290325" height="16"></rect><rect fill="#1ab394" x="52.12903225806452" y="5.333333333333334" width="2.2580645161290325" height="10.666666666666666"></rect><rect fill="#d7d7d7" x="55.38709677419355" y="8.88888888888889" width="2.2580645161290325" height="7.111111111111111"></rect><rect fill="#1ab394" x="58.645161290322584" y="7.111111111111111" width="2.2580645161290325" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="61.903225806451616" y="3.555555555555557" width="2.2580645161290325" height="12.444444444444443"></rect><rect fill="#1ab394" x="65.16129032258065" y="10.666666666666668" width="2.2580645161290325" height="5.333333333333333"></rect><rect fill="#d7d7d7" x="68.41935483870968" y="12.444444444444445" width="2.2580645161290325" height="3.5555555555555554"></rect><rect fill="#1ab394" x="71.67741935483872" y="14.222222222222221" width="2.2580645161290325" height="1.7777777777777777"></rect><rect fill="#d7d7d7" x="74.93548387096774" y="15" width="2.2580645161290325" height="1"></rect><rect fill="#1ab394" x="78.19354838709678" y="0" width="2.2580645161290325" height="16"></rect><rect fill="#d7d7d7" x="81.45161290322581" y="7.111111111111111" width="2.2580645161290325" height="8.88888888888889"></rect><rect fill="#1ab394" x="84.70967741935485" y="5.333333333333334" width="2.2580645161290325" height="10.666666666666666"></rect><rect fill="#d7d7d7" x="87.96774193548387" y="1.7777777777777786" width="2.2580645161290325" height="14.222222222222221"></rect><rect fill="#1ab394" x="91.22580645161291" y="10.666666666666668" width="2.2580645161290325" height="5.333333333333333"></rect><rect fill="#d7d7d7" x="94.48387096774194" y="12.444444444444445" width="2.2580645161290325" height="3.5555555555555554"></rect><rect fill="#1ab394" x="97.74193548387098" y="14.222222222222221" width="2.2580645161290325" height="1.7777777777777777"></rect></svg>
-                                                    <br>
-                                                    <small class="font-bold">$ 20 054.43</small>
-                                                </div>
-                                                <h4>NYS report new data!
-                                                    <br>
-                                                    <small class="m-r"><a href="graph_flot.html"> Check the stock price! </a> </small>
-                                                </h4>
-                                            </div>
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>3326</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:29 PM</td>
+                                                    <td>$321.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3325</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:20 PM</td>
+                                                    <td>$234.34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3324</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:03 PM</td>
+                                                    <td>$724.17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3323</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:00 PM</td>
+                                                    <td>$23.71</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3322</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:49 PM</td>
+                                                    <td>$8345.23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3321</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:23 PM</td>
+                                                    <td>$245.12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3320</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:15 PM</td>
+                                                    <td>$5663.54</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3319</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:13 PM</td>
+                                                    <td>$943.45</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="ibox float-e-margins">
-                                        <div class="ibox-title">
-                                            <h5>Read below comments and tweets</h5>
-                                            <div class="ibox-tools">
-                                                <a class="collapse-link">
-                                                    <i class="fa fa-chevron-up"></i>
-                                                </a>
-                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                    <i class="fa fa-wrench"></i>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-user">
-                                                    <li><a href="#">Config option 1</a>
-                                                    </li>
-                                                    <li><a href="#">Config option 2</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="close-link">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="ibox-content no-padding">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is crazy! </p>
-                                                    <div class="text-center m">
-                                                        <span id="sparkline8"><canvas width="170" height="150" style="display: inline-block; width: 170px; height: 150px; vertical-align: top;"></canvas></span>
-                                                    </div>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley </p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                                </li>
-                                                <li class="list-group-item ">
-                                                    <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley </p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <!-- /.table-responsive -->
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="ibox float-e-margins">
-                                        <div class="ibox-title">
-                                            <h5>Your daily feed</h5>
-                                            <div class="ibox-tools">
-                                                <span class="label label-warning-light">10 Messages</span>
-                                            </div>
-                                        </div>
-                                        <div class="ibox-content">
-
-                                            <div>
-                                                <div class="feed-activity-list">
-
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/profile.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">5m ago</small>
-                                                            <strong>Monica Smith</strong> posted a new blog. <br>
-                                                            <small class="text-muted">Today 5:60 pm - 12.06.2014</small>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/a2.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">2h ago</small>
-                                                            <strong>Mark Johnson</strong> posted message on <strong>Monica Smith</strong> site. <br>
-                                                            <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/a3.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">2h ago</small>
-                                                            <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>. <br>
-                                                            <small class="text-muted">2 days ago at 8:30am</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/a4.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right text-navy">5h ago</small>
-                                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                                            <div class="actions">
-                                                                <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                                <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/a5.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">2h ago</small>
-                                                            <strong>Kim Smith</strong> posted message on <strong>Monica Smith</strong> site. <br>
-                                                            <small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
-                                                            <div class="well">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                                                Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/profile.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">23h ago</small>
-                                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="feed-element">
-                                                        <a href="profile.html" class="pull-left">
-                                                            <img alt="image" class="img-circle" src="img/a7.jpg">
-                                                        </a>
-                                                        <div class="media-body ">
-                                                            <small class="pull-right">46h ago</small>
-                                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="347" version="1.1" width="670" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.765625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="33.5" y="313" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,313H645" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="241" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">25</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,241H645" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="169" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,169H645" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="97" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,97H645" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,25H645" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="602.2142857142857" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="516.6428571428571" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><text x="431.07142857142856" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="345.5" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><text x="259.92857142857144" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><text x="174.35714285714286" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2007</tspan></text><text x="88.78571428571428" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><rect x="56.69642857142857" y="25" width="30.589285714285715" height="288" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="90.28571428571428" y="53.80000000000001" width="30.589285714285715" height="259.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="142.2678571428571" y="97" width="30.589285714285715" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="175.85714285714283" y="125.80000000000001" width="30.589285714285715" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="227.83928571428572" y="169" width="30.589285714285715" height="144" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="261.42857142857144" y="197.8" width="30.589285714285715" height="115.19999999999999" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="313.4107142857143" y="97" width="30.589285714285715" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="347" y="125.80000000000001" width="30.589285714285715" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="398.98214285714283" y="169" width="30.589285714285715" height="144" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="432.57142857142856" y="197.8" width="30.589285714285715" height="115.19999999999999" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="484.5535714285714" y="97" width="30.589285714285715" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="518.1428571428571" y="125.80000000000001" width="30.589285714285715" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="570.125" y="25" width="30.589285714285715" height="288" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="603.7142857142857" y="53.80000000000001" width="30.589285714285715" height="259.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="ibox float-e-margins">
-                                        <div class="ibox-title">
-                                            <h5>Alpha project</h5>
-                                            <div class="ibox-tools">
-                                                <a class="collapse-link">
-                                                    <i class="fa fa-chevron-up"></i>
-                                                </a>
-                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                    <i class="fa fa-wrench"></i>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-user">
-                                                    <li><a href="#">Config option 1</a>
-                                                    </li>
-                                                    <li><a href="#">Config option 2</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="close-link">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="ibox-content ibox-heading">
-                                            <h3>You have meeting today!</h3>
-                                            <small><i class="fa fa-map-marker"></i> Meeting is on 6:00am. Check your schedule to see detail.</small>
-                                        </div>
-                                        <div class="ibox-content inspinia-timeline">
-
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-briefcase"></i>
-                                                        6:00 am
-                                                        <br>
-                                                        <small class="text-navy">2 hour ago</small>
-                                                    </div>
-                                                    <div class="col-xs-7 content no-top-border">
-                                                        <p class="m-b-xs"><strong>Meeting</strong></p>
-
-                                                        <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the
-                                                            sale.</p>
-
-                                                        <p><span data-diameter="40" class="updating-chart" style="display: none;">5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2,6,8,4,0,1,0,4,6,4,5,7,2,6,8</span><svg class="peity" height="16" width="64"><polygon fill="#1ab394" points="0 15 0 7.166666666666666 1.7777777777777777 0.5 3.5555555555555554 8.833333333333332 5.333333333333333 3.833333333333332 7.111111111111111 10.5 8.88888888888889 12.166666666666666 10.666666666666666 0.5 12.444444444444443 2.166666666666666 14.222222222222221 3.833333333333332 16 8.833333333333332 17.77777777777778 7.166666666666666 19.555555555555554 13.833333333333334 21.333333333333332 12.166666666666666 23.11111111111111 0.5 24.888888888888886 7.166666666666666 26.666666666666664 8.833333333333332 28.444444444444443 3.833333333333332 30.22222222222222 12.166666666666666 32 3.833333333333332 33.77777777777778 3.833333333333332 35.55555555555556 10.5 37.33333333333333 7.166666666666666 39.11111111111111 12.166666666666666 40.888888888888886 5.5 42.666666666666664 2.166666666666666 44.44444444444444 8.833333333333332 46.22222222222222 15.5 48 13.833333333333334 49.77777777777777 15.5 51.55555555555555 8.833333333333332 53.33333333333333 5.5 55.11111111111111 8.833333333333332 56.888888888888886 7.166666666666666 58.666666666666664 3.833333333333332 60.44444444444444 12.166666666666666 62.22222222222222 5.5 64 2.166666666666666 64 15"></polygon><polyline fill="transparent" points="0 7.166666666666666 1.7777777777777777 0.5 3.5555555555555554 8.833333333333332 5.333333333333333 3.833333333333332 7.111111111111111 10.5 8.88888888888889 12.166666666666666 10.666666666666666 0.5 12.444444444444443 2.166666666666666 14.222222222222221 3.833333333333332 16 8.833333333333332 17.77777777777778 7.166666666666666 19.555555555555554 13.833333333333334 21.333333333333332 12.166666666666666 23.11111111111111 0.5 24.888888888888886 7.166666666666666 26.666666666666664 8.833333333333332 28.444444444444443 3.833333333333332 30.22222222222222 12.166666666666666 32 3.833333333333332 33.77777777777778 3.833333333333332 35.55555555555556 10.5 37.33333333333333 7.166666666666666 39.11111111111111 12.166666666666666 40.888888888888886 5.5 42.666666666666664 2.166666666666666 44.44444444444444 8.833333333333332 46.22222222222222 15.5 48 13.833333333333334 49.77777777777777 15.5 51.55555555555555 8.833333333333332 53.33333333333333 5.5 55.11111111111111 8.833333333333332 56.888888888888886 7.166666666666666 58.666666666666664 3.833333333333332 60.44444444444444 12.166666666666666 62.22222222222222 5.5 64 2.166666666666666" stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline></svg></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-file-text"></i>
-                                                        7:00 am
-                                                        <br>
-                                                        <small class="text-navy">3 hour ago</small>
-                                                    </div>
-                                                    <div class="col-xs-7 content">
-                                                        <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-coffee"></i>
-                                                        8:00 am
-                                                        <br>
-                                                    </div>
-                                                    <div class="col-xs-7 content">
-                                                        <p class="m-b-xs"><strong>Coffee Break</strong></p>
-                                                        <p>
-                                                            Go to shop and find some products.
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-phone"></i>
-                                                        11:00 am
-                                                        <br>
-                                                        <small class="text-navy">21 hour ago</small>
-                                                    </div>
-                                                    <div class="col-xs-7 content">
-                                                        <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
-                                                        <p>
-                                                            Lorem Ipsum has been the industry's standard dummy text ever since.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-user-md"></i>
-                                                        09:00 pm
-                                                        <br>
-                                                        <small>21 hour ago</small>
-                                                    </div>
-                                                    <div class="col-xs-7 content">
-                                                        <p class="m-b-xs"><strong>Go to the doctor dr Smith</strong></p>
-                                                        <p>
-                                                            Find some issue and go to doctor.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="row">
-                                                    <div class="col-xs-3 date">
-                                                        <i class="fa fa-comments"></i>
-                                                        12:50 pm
-                                                        <br>
-                                                        <small class="text-navy">48 hour ago</small>
-                                                    </div>
-                                                    <div class="col-xs-7 content">
-                                                        <p class="m-b-xs"><strong>Chat with Monica and Sandra</strong></p>
-                                                        <p>
-                                                            Web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <!-- /.col-lg-8 (nested) -->
                             </div>
+                            <!-- /.row -->
                         </div>
-                        <div class="footer">
-                            <div class="pull-right">
-                                10GB of <strong>250GB</strong> Free.
-                            </div>
-                            <div>
-                                <strong>Copyright</strong> Example Company © 2014-2015
-                            </div>
-                        </div>
+                        <!-- /.panel-body -->
                     </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge"><i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-save"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
+                                            <hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-gear"></i>  <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Action</a>
+                                                    </li>
+                                                    <li><a href="#">Another action</a>
+                                                    </li>
+                                                    <li><a href="#">Something else here</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
                 </div>
-
-            </div>
-            <div class="small-chat-box fadeInRight animated">
-
-                <div class="heading" draggable="true">
-                    <small class="chat-date pull-right">
-                        02.19.2015
-                    </small>
-                    Small chat
-                </div>
-
-                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 234px;"><div class="content" style="overflow: hidden; width: auto; height: 234px;">
-
-                        <div class="left">
-                            <div class="author-name">
-                                Monica Jackson <small class="chat-date">
-                                    10:02 am
-                                </small>
-                            </div>
-                            <div class="chat-message active">
-                                Lorem Ipsum is simply dummy text input.
-                            </div>
-
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> Notifications Panel
                         </div>
-                        <div class="right">
-                            <div class="author-name">
-                                Mick Smith
-                                <small class="chat-date">
-                                    11:24 am
-                                </small>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-money fa-fw"></i> Payment Received
+                                    <span class="pull-right text-muted small"><em>Yesterday</em>
+                                    </span>
+                                </a>
                             </div>
-                            <div class="chat-message">
-                                Lorem Ipsum is simpl.
-                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block">View All Alerts</a>
                         </div>
-                        <div class="left">
-                            <div class="author-name">
-                                Alice Novak
-                                <small class="chat-date">
-                                    08:45 pm
-                                </small>
-                            </div>
-                            <div class="chat-message active">
-                                Check this stock char.
-                            </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
                         </div>
-                        <div class="right">
-                            <div class="author-name">
-                                Anna Lamson
-                                <small class="chat-date">
-                                    11:24 am
-                                </small>
-                            </div>
-                            <div class="chat-message">
-                                The standard chunk of Lorem Ipsum
-                            </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"><svg height="347" version="1.1" width="479" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.328125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#0b62a4" d="M239.5,286.6666666666667A110.66666666666667,110.66666666666667,0,0,0,343.98523596313163,212.46843260739092" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#0b62a4" stroke="#ffffff" d="M239.5,289.6666666666667A113.66666666666667,113.66666666666667,0,0,0,346.8176670585177,213.45703469614548L391.5071354523873,229.05497876316207A161,161,0,0,1,239.5,337Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#3980b5" d="M343.98523596313163,212.46843260739092A110.66666666666667,110.66666666666667,0,0,0,140.2245062356979,127.09716318080183" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#3980b5" stroke="#ffffff" d="M346.8176670585177,213.45703469614548A113.66666666666667,113.66666666666667,0,0,0,137.53330309148487,125.77148386943801L90.58675935354682,102.64574477120273A166,166,0,0,1,396.2278539446975,230.70264891108636Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#679dc6" d="M140.2245062356979,127.09716318080183A110.66666666666667,110.66666666666667,0,0,0,239.4652330418721,286.66666120548564" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#679dc6" stroke="#ffffff" d="M137.53330309148487,125.77148386943801A113.66666666666667,113.66666666666667,0,0,0,239.4642905640915,289.66666105744156L239.4494203591091,336.9999920549685A161,161,0,0,1,95.07209792723518,104.85521029014241Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="239.5" y="166" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(1.7172,0,0,1.7172,-171.7793,-126.9517)" stroke-width="0.5823293172690762"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">In-Store Sales</tspan></text><text x="239.5" y="186" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(2.3056,0,0,2.3056,-312.6806,-232.3889)" stroke-width="0.4337349397590361"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text></svg></div>
+                            <a href="#" class="btn btn-default btn-block">View Details</a>
                         </div>
-                        <div class="left">
-                            <div class="author-name">
-                                Mick Lane
-                                <small class="chat-date">
-                                    08:45 pm
-                                </small>
-                            </div>
-                            <div class="chat-message active">
-                                I belive that. Lorem Ipsum is simply dummy text.
-                            </div>
-                        </div>
-
-
-                    </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
-                <div class="form-chat">
-                    <div class="input-group input-group-sm"><input type="text" class="form-control"> <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
-                            </button> </span></div>
-                </div>
-
-            </div>
-            <div id="small-chat">
-
-                <span class="badge badge-warning pull-right">5</span>
-                <a class="open-small-chat">
-                    <i class="fa fa-comments"></i>
-
-                </a>
-            </div>
-            <div id="right-sidebar">
-                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
-
-                        <ul class="nav nav-tabs navs-3">
-
-                            <li class="active"><a data-toggle="tab" href="#tab-1">
-                                    Notes
-                                </a></li>
-                            <li><a data-toggle="tab" href="#tab-2">
-                                    Projects
-                                </a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-3">
-                                    <i class="fa fa-gear"></i>
-                                </a></li>
-                        </ul>
-
-                        <div class="tab-content">
-
-
-                            <div id="tab-1" class="tab-pane active">
-
-                                <div class="sidebar-title">
-                                    <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
-                                    <small><i class="fa fa-tim"></i> You have 10 new message.</small>
-                                </div>
-
-                                <div>
-
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
-
-                                                <div class="m-t-xs">
-                                                    <i class="fa fa-star text-warning"></i>
-                                                    <i class="fa fa-star text-warning"></i>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-
-                                                There are many variations of passages of Lorem Ipsum available.
-                                                <br>
-                                                <small class="text-muted">Today 4:21 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
-                                            </div>
-                                            <div class="media-body">
-                                                The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                                <br>
-                                                <small class="text-muted">Yesterday 2:45 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                                <div class="m-t-xs">
-                                                    <i class="fa fa-star text-warning"></i>
-                                                    <i class="fa fa-star text-warning"></i>
-                                                    <i class="fa fa-star text-warning"></i>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                <br>
-                                                <small class="text-muted">Yesterday 1:10 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                            </div>
-
-                                            <div class="media-body">
-                                                Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                                <br>
-                                                <small class="text-muted">Monday 8:37 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
-                                            </div>
-                                            <div class="media-body">
-
-                                                All the Lorem Ipsum generators on the Internet tend to repeat.
-                                                <br>
-                                                <small class="text-muted">Today 4:21 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
-                                            </div>
-                                            <div class="media-body">
-                                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                                <br>
-                                                <small class="text-muted">Yesterday 2:45 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                                <div class="m-t-xs">
-                                                    <i class="fa fa-star text-warning"></i>
-                                                    <i class="fa fa-star text-warning"></i>
-                                                    <i class="fa fa-star text-warning"></i>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
-                                                <br>
-                                                <small class="text-muted">Yesterday 1:10 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sidebar-message">
-                                        <a href="#">
-                                            <div class="pull-left text-center">
-                                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                            </div>
-                                            <div class="media-body">
-                                                Uncover many web sites still in their infancy. Various versions have.
-                                                <br>
-                                                <small class="text-muted">Monday 8:37 pm</small>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div id="tab-2" class="tab-pane">
-
-                                <div class="sidebar-title">
-                                    <h3> <i class="fa fa-cube"></i> Latest projects</h3>
-                                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                                </div>
-
-                                <ul class="sidebar-list">
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
                                     <li>
                                         <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Business valuation</h4>
-                                            It is a long established fact that a reader will be distracted.
-
-                                            <div class="small">Completion with: 22%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                            </div>
-                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Contract with Company </h4>
-                                            Many desktop publishing packages and web page editors.
-
-                                            <div class="small">Completion with: 48%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 48%;" class="progress-bar"></div>
-                                            </div>
+                                            <i class="fa fa-check-circle fa-fw"></i> Available
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Meeting</h4>
-                                            By the readable content of a page when looking at its layout.
-
-                                            <div class="small">Completion with: 14%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                            </div>
+                                            <i class="fa fa-times fa-fw"></i> Busy
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <span class="label label-primary pull-right">NEW</span>
-                                            <h4>The generated</h4>
-                                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
-                                            There are many variations of passages of Lorem Ipsum available.
-                                            <div class="small">Completion with: 22%</div>
-                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                            <i class="fa fa-clock-o fa-fw"></i> Away
                                         </a>
                                     </li>
+                                    <li class="divider"></li>
                                     <li>
                                         <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Business valuation</h4>
-                                            It is a long established fact that a reader will be distracted.
-
-                                            <div class="small">Completion with: 22%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                            </div>
-                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Contract with Company </h4>
-                                            Many desktop publishing packages and web page editors.
-
-                                            <div class="small">Completion with: 48%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 48%;" class="progress-bar"></div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                                            <h4>Meeting</h4>
-                                            By the readable content of a page when looking at its layout.
-
-                                            <div class="small">Completion with: 14%</div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="label label-primary pull-right">NEW</span>
-                                            <h4>The generated</h4>
-                                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
-                                            There are many variations of passages of Lorem Ipsum available.
-                                            <div class="small">Completion with: 22%</div>
-                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                                        </a>
-                                    </li>
-
                                 </ul>
-
-                            </div>
-
-                            <div id="tab-3" class="tab-pane">
-
-                                <div class="sidebar-title">
-                                    <h3><i class="fa fa-gears"></i> Settings</h3>
-                                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                                </div>
-
-                                <div class="setings-item">
-                                    <span>
-                                        Show notifications
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-                                            <label class="onoffswitch-label" for="example">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Disable Chat
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
-                                            <label class="onoffswitch-label" for="example2">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Enable history
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-                                            <label class="onoffswitch-label" for="example3">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Show charts
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-                                            <label class="onoffswitch-label" for="example4">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Offline users
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-                                            <label class="onoffswitch-label" for="example5">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Global search
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-                                            <label class="onoffswitch-label" for="example6">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="setings-item">
-                                    <span>
-                                        Update everyday
-                                    </span>
-                                    <div class="switch">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
-                                            <label class="onoffswitch-label" for="example7">
-                                                <span class="onoffswitch-inner"></span>
-                                                <span class="onoffswitch-switch"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-content">
-                                    <h4>Settings</h4>
-                                    <div class="small">
-                                        I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                        Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-
-                    </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 752.604166666667px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
-
-
-
-            </div>
-        </div>
-
-        <!-- Mainly scripts -->
-        <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="js/jquery-2.1.1.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-        <!-- Flot -->
-        <script src="js/plugins/flot/jquery.flot.js"></script>
-        <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-        <script src="js/plugins/flot/jquery.flot.spline.js"></script>
-        <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-        <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-
-        <!-- Peity -->
-        <script src="js/plugins/peity/jquery.peity.min.js"></script>
-        <script src="js/demo/peity-demo.js"></script>
-
-        <!-- Custom and plugin javascript -->
-        <script src="js/inspinia.js"></script>
-        <script src="js/plugins/pace/pace.min.js"></script>
-
-        <!-- jQuery UI -->
-        <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-        <!-- GITTER -->
-        <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
-
-        <!-- Sparkline -->
-        <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-        <!-- Sparkline demo data  -->
-        <script src="js/demo/sparkline-demo.js"></script>
-
-        <!-- ChartJS-->
-        <script src="js/plugins/chartJs/Chart.min.js"></script>
-
-        <!-- Toastr -->
-        <script src="js/plugins/toastr/toastr.min.js"></script>
-
-
-        <script>
-            $(document).ready(function () {
-                setTimeout(function () {
-                    toastr.options = {
-                        closeButton: true,
-                        progressBar: true,
-                        showMethod: 'slideDown',
-                        timeOut: 4000
-                    };
-                    toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
-
-                }, 1300);
-
-
-                var data1 = [
-                    [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 30], [11, 10], [12, 13], [13, 4], [14, 3], [15, 3], [16, 6]
-                ];
-                var data2 = [
-                    [0, 1], [1, 0], [2, 2], [3, 0], [4, 1], [5, 3], [6, 1], [7, 5], [8, 2], [9, 3], [10, 2], [11, 1], [12, 0], [13, 2], [14, 8], [15, 0], [16, 0]
-                ];
-                $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
-                    data1, data2
-                ],
-                        {
-                            series: {
-                                lines: {
-                                    show: false,
-                                    fill: true
-                                },
-                                splines: {
-                                    show: true,
-                                    tension: 0.4,
-                                    lineWidth: 1,
-                                    fill: 0.4
-                                },
-                                points: {
-                                    radius: 0,
-                                    show: true
-                                },
-                                shadowSize: 2
-                            },
-                            grid: {
-                                hoverable: true,
-                                clickable: true,
-                                tickColor: "#d5d5d5",
-                                borderWidth: 1,
-                                color: '#d5d5d5'
-                            },
-                            colors: ["#1ab394", "#464f88"],
-                            xaxis: {
-                            },
-                            yaxis: {
-                                ticks: 4
-                            },
-                            tooltip: false
-                        }
-                );
-
-                var doughnutData = [
-                    {
-                        value: 300,
-                        color: "#a3e1d4",
-                        highlight: "#1ab394",
-                        label: "App"
-                    },
-                    {
-                        value: 50,
-                        color: "#dedede",
-                        highlight: "#1ab394",
-                        label: "Software"
-                    },
-                    {
-                        value: 100,
-                        color: "#b5b8cf",
-                        highlight: "#1ab394",
-                        label: "Laptop"
-                    }
-                ];
-
-                var doughnutOptions = {
-                    segmentShowStroke: true,
-                    segmentStrokeColor: "#fff",
-                    segmentStrokeWidth: 2,
-                    percentageInnerCutout: 45, // This is 0 for Pie charts
-                    animationSteps: 100,
-                    animationEasing: "easeOutBounce",
-                    animateRotate: true,
-                    animateScale: false,
-                };
-
-                var ctx = document.getElementById("doughnutChart").getContext("2d");
-                var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
-
-                var polarData = [
-                    {
-                        value: 300,
-                        color: "#a3e1d4",
-                        highlight: "#1ab394",
-                        label: "App"
-                    },
-                    {
-                        value: 140,
-                        color: "#dedede",
-                        highlight: "#1ab394",
-                        label: "Software"
-                    },
-                    {
-                        value: 200,
-                        color: "#b5b8cf",
-                        highlight: "#1ab394",
-                        label: "Laptop"
-                    }
-                ];
-
-                var polarOptions = {
-                    scaleShowLabelBackdrop: true,
-                    scaleBackdropColor: "rgba(255,255,255,0.75)",
-                    scaleBeginAtZero: true,
-                    scaleBackdropPaddingY: 1,
-                    scaleBackdropPaddingX: 1,
-                    scaleShowLine: true,
-                    segmentShowStroke: true,
-                    segmentStrokeColor: "#fff",
-                    segmentStrokeWidth: 2,
-                    animationSteps: 100,
-                    animationEasing: "easeOutBounce",
-                    animateRotate: true,
-                    animateScale: false,
-                };
-                var ctx = document.getElementById("polarChart").getContext("2d");
-                var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
-
-            });
-        </script>
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-4625583-2', 'webapplayers.com');
-            ga('send', 'pageview');
-
-        </script>
-
-
-        <div class="theme-config">
-            <div class="theme-config-box">
-                <div class="spin-icon">
-                    <i class="fa fa-cogs fa-spin"></i>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
                 </div>
-                <div class="skin-setttings">
-                    <div class="title">Configuration</div>
-                    <div class="setings-item">
-                        <span>
-                            Collapse menu
-                        </span>
-
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="collapsemenu">
-                                <label class="onoffswitch-label" for="collapsemenu">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-                        <span>
-                            Fixed sidebar
-                        </span>
-
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="fixedsidebar" class="onoffswitch-checkbox" id="fixedsidebar">
-                                <label class="onoffswitch-label" for="fixedsidebar">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-                        <span>
-                            Top navbar
-                        </span>
-
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox" id="fixednavbar">
-                                <label class="onoffswitch-label" for="fixednavbar">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-                        <span>
-                            Boxed layout
-                        </span>
-
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox" id="boxedlayout">
-                                <label class="onoffswitch-label" for="boxedlayout">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-                        <span>
-                            Fixed footer
-                        </span>
-
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="fixedfooter" class="onoffswitch-checkbox" id="fixedfooter">
-                                <label class="onoffswitch-label" for="fixedfooter">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="title">Skins</div>
-                    <div class="setings-item default-skin">
-                        <span class="skin-name ">
-                            <a href="#" class="s-skin-0">
-                                Default
-                            </a>
-                        </span>
-                    </div>
-                    <div class="setings-item blue-skin">
-                        <span class="skin-name ">
-                            <a href="#" class="s-skin-1">
-                                Blue light
-                            </a>
-                        </span>
-                    </div>
-                    <div class="setings-item yellow-skin">
-                        <span class="skin-name ">
-                            <a href="#" class="s-skin-3">
-                                Yellow/Purple
-                            </a>
-                        </span>
-                    </div>
-                </div>
+                <!-- /.col-lg-4 -->
             </div>
+            <!-- /.row -->
         </div>
-        <script>
-            // Config box
+        <!-- /#page-wrapper -->
 
-            // Enable/disable fixed top navbar
-            $('#fixednavbar').click(function () {
-                if ($('#fixednavbar').is(':checked')) {
-                    $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
-                    $("body").removeClass('boxed-layout');
-                    $("body").addClass('fixed-nav');
-                    $('#boxedlayout').prop('checked', false);
+    </div>
+    <!-- /#wrapper -->
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("boxedlayout", 'off');
-                    }
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixednavbar", 'on');
-                    }
-                } else {
-                    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
-                    $("body").removeClass('fixed-nav');
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixednavbar", 'off');
-                    }
-                }
-            });
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-            // Enable/disable fixed sidebar
-            $('#fixedsidebar').click(function () {
-                if ($('#fixedsidebar').is(':checked')) {
-                    $("body").addClass('fixed-sidebar');
-                    $('.sidebar-collapse').slimScroll({
-                        height: '100%',
-                        railOpacity: 0.9
-                    });
+    <!-- Morris Charts JavaScript -->
+    <script src="../bower_components/raphael/raphael-min.js"></script>
+    <script src="../bower_components/morrisjs/morris.min.js"></script>
+    <script src="../js/morris-data.js"></script>
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixedsidebar", 'on');
-                    }
-                } else {
-                    $('.sidebar-collapse').slimscroll({destroy: true});
-                    $('.sidebar-collapse').attr('style', '');
-                    $("body").removeClass('fixed-sidebar');
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixedsidebar", 'off');
-                    }
-                }
-            });
-
-            // Enable/disable collapse menu
-            $('#collapsemenu').click(function () {
-                if ($('#collapsemenu').is(':checked')) {
-                    $("body").addClass('mini-navbar');
-                    SmoothlyMenu();
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("collapse_menu", 'on');
-                    }
-
-                } else {
-                    $("body").removeClass('mini-navbar');
-                    SmoothlyMenu();
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("collapse_menu", 'off');
-                    }
-                }
-            });
-
-            // Enable/disable boxed layout
-            $('#boxedlayout').click(function () {
-                if ($('#boxedlayout').is(':checked')) {
-                    $("body").addClass('boxed-layout');
-                    $('#fixednavbar').prop('checked', false);
-                    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
-                    $("body").removeClass('fixed-nav');
-                    $(".footer").removeClass('fixed');
-                    $('#fixedfooter').prop('checked', false);
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixednavbar", 'off');
-                    }
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixedfooter", 'off');
-                    }
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
 
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("boxedlayout", 'on');
-                    }
-                } else {
-                    $("body").removeClass('boxed-layout');
 
-                    if (localStorageSupport) {
-                        localStorage.setItem("boxedlayout", 'off');
-                    }
-                }
-            });
 
-            // Enable/disable fixed footer
-            $('#fixedfooter').click(function () {
-                if ($('#fixedfooter').is(':checked')) {
-                    $('#boxedlayout').prop('checked', false);
-                    $("body").removeClass('boxed-layout');
-                    $(".footer").addClass('fixed');
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("boxedlayout", 'off');
-                    }
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixedfooter", 'on');
-                    }
-                } else {
-                    $(".footer").removeClass('fixed');
-
-                    if (localStorageSupport) {
-                        localStorage.setItem("fixedfooter", 'off');
-                    }
-                }
-            });
-
-            // SKIN Select
-            $('.spin-icon').click(function () {
-                $(".theme-config-box").toggleClass("show");
-            });
-
-            // Default skin
-            $('.s-skin-0').click(function () {
-                $("body").removeClass("skin-1");
-                $("body").removeClass("skin-2");
-                $("body").removeClass("skin-3");
-            });
-
-            // Blue skin
-            $('.s-skin-1').click(function () {
-                $("body").removeClass("skin-2");
-                $("body").removeClass("skin-3");
-                $("body").addClass("skin-1");
-            });
-
-            // Inspinia ultra skin
-            $('.s-skin-2').click(function () {
-                $("body").removeClass("skin-1");
-                $("body").removeClass("skin-3");
-                $("body").addClass("skin-2");
-            });
-
-            // Yellow skin
-            $('.s-skin-3').click(function () {
-                $("body").removeClass("skin-1");
-                $("body").removeClass("skin-2");
-                $("body").addClass("skin-3");
-            });
-
-            if (localStorageSupport) {
-                var collapse = localStorage.getItem("collapse_menu");
-                var fixedsidebar = localStorage.getItem("fixedsidebar");
-                var fixednavbar = localStorage.getItem("fixednavbar");
-                var boxedlayout = localStorage.getItem("boxedlayout");
-                var fixedfooter = localStorage.getItem("fixedfooter");
-
-                if (collapse == 'on') {
-                    $('#collapsemenu').prop('checked', 'checked')
-                }
-                if (fixedsidebar == 'on') {
-                    $('#fixedsidebar').prop('checked', 'checked')
-                }
-                if (fixednavbar == 'on') {
-                    $('#fixednavbar').prop('checked', 'checked')
-                }
-                if (boxedlayout == 'on') {
-                    $('#boxedlayout').prop('checked', 'checked')
-                }
-                if (fixedfooter == 'on') {
-                    $('#fixedfooter').prop('checked', 'checked')
-                }
-            }
-        </script></body></html>
+</body></html>
