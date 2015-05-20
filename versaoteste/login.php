@@ -27,7 +27,7 @@ if (isset($_POST['add'])) {
     }
 
 
-    $sql = "INSERT INTO smartpeople.registos " .
+    $sql = "INSERT INTO registos " .
             "(mailsmartpeople,passwordsmartpeople,mailfacebook,passwordfacebook,maillinkdin,passwordlinkdin) " .
             "VALUES('$v_mailsmartpeople','$v_passwordsmartpeople','$v_mailfacebook','$v_passwordfacebook','$v_maillinkdin','$v_passwordlinkdin') ";
     mysql_select_db('smartpeople');
