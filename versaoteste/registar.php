@@ -38,7 +38,5 @@ if (isset($_POST['add'])) {
 
     header("Location: http://localhost/versaoteste1/index.html");
     mysql_close($conn);
-    
 }
-
 ?>
