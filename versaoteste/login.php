@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passwordsmartpeople = mysqli_real_escape_string($db, $_POST['passwordsmartpeople']);
 
     $sql = "SELECT mailsmartpeople FROM smartpeople WHERE mailsmartpeople='$mailsmartpeople' and passwordsmartpeople='$passwordsmartpeople'";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = mysql_query($db, $sql);
+    $row = mysql_fetch_array($result);
     $active = $row['active'];
-    $count = mysqli_num_rows($result);
+    $count = mysql_num_rows($result);
 
 
 // If result matched $myusername and $mypassword, table row must be 1 row
