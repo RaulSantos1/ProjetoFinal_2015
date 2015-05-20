@@ -1,27 +1,24 @@
 <?php
+$connect = mysql_connect('localhost','adminsmartpeople','smartpeople');
+$db = mysql_select_db('smartpeople');
+$mailsmartpeople = $_POST['mailsmartpeople'];
+$entrar = $_POST['entrar'];
+$passwordsmartpeople = $_POST['passwordsmartpeople'];
 
-//Inicia sessão
-session_start();
-//Liga ao sistema de bases de dados e escolhe a base de dados
-mysql_connect('localhost', 'adminsmartpeople', 'smartpeople');
-mysql_select_db('smartpeople');
-
-//Consulta do utilizador
-$consulta = "Select * from registos where mailsmartpeople='" . $_POST['mailsmartpeople'] . "' and passwordsmartpeople='" . $_POST['passwordsmartpeople'] . "'";
-$resultado = mysql_query($consulta);
-
-//Se o email e a password coincidirem
-if (mysql_num_rows($resultado) > 0) {
-    //Coloca na variável linha os dados da consulta
-    $linha = mysql_fetch_array($resultado);
-    //Coloca o email em sessão utilizando o array de sessões
-    $_SESSION['email'] = $linha['email'];
-    //Coloca o tipo de utilizador em sessão para posteriores validações com base nele
-    $_SESSION['role'] = $linha['id'];
-    //Redirecciona o utilizador para a página secreta
-    header("location: user.php");
-} else {
-    //Caso as credenciais não coincidam, redirecciona para a página de login reportando o erro
-    header("location: login.html?erro=1");
+if (isset($entrar)) {
+	$verifica = mysql_query("SELECT * FROM registos WHERE mailsmartpeople = '$mailsmartpeople' AND passwordsmartpeople = '$passwordsmartpeople'") or die ("erro ao selecionar");
+	
+	if (mysql_num_rows($verifica)<=0) {
+		echo"<script language='javascript' type='text/javascript'>
+	alert('Login e/ou senha incorretos');window.location.href='index.html';
+</script>";
+die();
+	}
+	else
+	{
+		setcookie("mailsmartpeople",$mailsmartpeople);
+		header("Location: user.php");
+	}
 }
+
 ?>
