@@ -11,6 +11,6 @@ $login_session=$row['mailsmartpeople'];
 
 if(!isset($login_session))
 {
-header("Location: http://localhost/versaoteste1/index.html");
+header("Location: http://localhost/versaoteste1/index.php");
 }
 ?>
