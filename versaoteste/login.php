@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL ^ E_DEPRECATED);
 if (isset($_POST['add'])) {
-    $dbhost = 'localhost:3306';
+    $dbhost = 'localhost';
     $dbuser = 'adminsmartpeople';
     $dbpass = 'smartpeople';
     $conn = mysql_connect($dbhost, $dbuser, $dbpass);
@@ -36,7 +36,9 @@ if (isset($_POST['add'])) {
         die('Could not enter data: ' . mysql_error());
     }
 
-    header("Location: http://localhost/indexlogin.html");
+    header("Location: http://localhost/index.html");
     mysql_close($conn);
+}else{
+    header("Location: http://localhost/login.php")
 }
 ?>
