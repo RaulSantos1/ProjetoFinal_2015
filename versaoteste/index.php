@@ -188,7 +188,7 @@
                     $mailsmartpeople = mysqli_real_escape_string($db, $_POST['mailsmartpeople']);
                     $passwordsmartpeople = mysqli_real_escape_string($db, $_POST['passwordsmartpeople']);
 
-                    $sql = "SELECT mailsmartpeople FROM smartpeople WHERE mailsmartpeople='$mailsmartpeople' and passwordsmartpeople='$passwordsmartpeople'";
+                    $sql = "SELECT id FROM smartpeople WHERE mailsmartpeople='$mailsmartpeople' and passwordsmartpeople='$passwordsmartpeople'";
                     $result = mysqli_query($db, $sql);
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     $active = $row['active'];
