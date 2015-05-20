@@ -1,6 +1,6 @@
 <?php
 
-include ("connection.php");
+include ("config.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // username and password sent from Form
     $mailsmartpeople = mysqli_real_escape_string($db, $_POST['mailsmartpeople']);
