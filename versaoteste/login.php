@@ -39,6 +39,6 @@ if (isset($_POST['add'])) {
     header("Location: http://localhost/index.html");
     mysql_close($conn);
 }else{
-    header("Location: http://localhost/login.php");
+    header("Email's e passwords incorrectos!");
 }
 ?>
