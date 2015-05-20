@@ -1,8 +1,10 @@
 <?php
-	//Aceder às sessões activas
-	session_start();
-	//Termina a sessão activa, destruindo-a juntamente com todas as variáveis de sessão definidas
-	session_destroy();
-	//Redirecciona o utilizador para a página de autenticação
-	header('Location: index.html');
+
+//Aceder às sessões activas
+session_start();
+//Termina a sessão activa, destruindo-a juntamente com todas as variáveis de sessão definidas
+session_destroy();
+//Redirecciona o utilizador para a página de autenticação
+header('Location: index.html');
+
 ?>
