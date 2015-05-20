@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_register("mailsmartpeople");
         $_SESSION['login_user'] = $mailsmartpeople;
 
-        header("location: http://localhost/versaoteste1/bem_vindo.php");
+        header("location: http://localhost/versaoteste1/bemvindo.php");
     } else {
         $error = "O seu email e password estao incorrectos!";
     }
