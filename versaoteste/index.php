@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)http://themeforces.com/demo/freebies/tf-free-no.3/ -->
 <html lang="pt">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,7 +7,7 @@
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>SmartPeople - Agregador Tem√°tico de Redes Sociais (Facebook, Linkedin)</title>
+        <title>SmartPeople - Agregador Tem·tico de Redes Sociais (Facebook, Linkedin)</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -36,288 +35,299 @@
         <![endif]-->
     </head>
     <body>
-        <?php
-        //Inicia sess„o
-        session_start();
-        //Liga ao sistema de bases de dados e escolhe a base de dados
-        $liga = mysqli_connect('localhost', 'adminsmartpeople', 'smartpeople');
-        mysqli_select_db($liga, 'registos');
-        //Menu Navigation 
-        if (isset($_SESSION['mailsmartpeople']) == 1) {
-            echo'<nav id = "tf-menu" class = "navbar navbar-default navbar-fixed-top">';
-            echo '<div class = "container">';
-            //Brand and toggle get grouped for better mobile display
-            echo'<div class = "navbar-header" style = "background-color: #ffffff;">';
-            echo'<button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">';
-            echo'<span class = "sr-only">Toggle navigation</span>';
-            echo'<span class = "icon-bar"></span>';
-            echo'<span class = "icon-bar"></span>';
-            echo'<span class = "icon-bar"></span>';
-            echo'</button>';
-            echo'<a clas1s = "page-scroll" href = "#tf-home"><img src = "img/logo-smart_people1.png" /></a>';
-            echo'</div>';
-            echo '<!--Collect the nav links, forms, and other content for toggling -->';
-            echo'<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">';
-            echo'<ul class = "nav navbar-nav navbar-right">';
-            echo'<li class = "active"><a href = "#tf-home" class = "page-scroll">In√≠cio</a></li>';
-            echo'<li><a href = "#tf-about" class = "page-scroll">Sobre</a></li> <!--#tf-about mudar para #inicio -->';
-            echo'<li><a href = "#tf-team" class = "page-scroll">Equipa</a></li> <!--#tf-about mudar para #equipa -->';
-            echo'<li><a href = "#tf-services" class = "page-scroll">Login</a></li> <!--#tf-about mudar para #login -->';
-            echo'</ul>';
-            echo'</div>';
-            echo'<!--/.navbar-collapse -->';
-            echo'</div>';
-            echo'<!--/.container-fluid -->';
-            echo'</nav>';
-            echo'<!--Home Page [inicio] -->';
-            echo'<div id = "tf-home" class = "text-center">';
-            echo'<div class = "overlay">';
-            echo'<div class = "content">';
-            echo'<h1>Bem vindo ao<strong><span class = "color"> SmartPeople</span></strong></h1>';
-            echo'<p class = "lead">Seja o smarter mais fant√°stico do planeta<strong> Linkedin </strong> e <strong>Facebook</strong></p>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<!--About Us Page [Sobre] -->';
-            echo'<div id = "tf-about">';
-            echo'<div class = "container">';
-            echo'<div class = "row">';
-            echo'<div class = "col-md-6">';
-            echo'<img src = "img/social.png" class = "img-responsive">';
-            echo'</div>';
-            echo'<div class = "col-md-6">';
-            echo'<div class = "about-text">';
-            echo'<div class = "section-title">';
-            echo'<h4>Sobre nÛs</h4>';
-            echo'<h2>O que √© o<strong> SmartPeople?</strong></h2>';
-            echo'<hr>';
-            echo'<div class = "clearfix"></div>';
-            echo'</div>';
-            echo'<p class = "intro">√â um agregador tem√°tico de redes sociais(Linkedin, Facebook) que lhe permite tirar partido de uma s√≥ rede. O utilizador da Smartpeole est√° na sua rede social(smartpeolple) e interv√™m e visualiza as outras redes sociais de uma maneira pr√°tica, simples e eficiente.</p>';
-            echo'<ul class = "about-list">';
-            echo'<li>';
-            echo'<span class = "fa fa-thumbs-o-up"></span>';
-            echo'<strong>Likes</strong> - <em>fa√ßa likes nas redes sociais (Linkedin, Facebook)</em>';
-            echo'</li>';
-            echo'<li>';
-            echo'<span class = "fa fa-comment-o"></span>';
-            echo'<strong>Coment√°rios</strong> - <em>fa√ßa coment√°rios nas redes sociais (Linkedin, Facebook)</em>';
-            echo'</li>';
-            echo'<li>';
-            echo'<span class = "fa fa-share-square-o"></span>';
-            echo'<strong>Partilhas</strong> - <em>fa√ßa partilhas nas redes sociais (Linkedin, Facebook)</em>';
-            echo'</li>';
-            echo'<li>';
-            echo'<span class = "fa fa-mobile"></span>';
-            echo'<strong>Aplica√ß√£o Mobile</strong> - <em>fa√ßa o download da nossa aplica√ß√£o <a href = "#">aqui</a>.</em>';
-            echo'</li>';
-            echo'</ul>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
+        <!-- Menu Navigation -->
+        <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="background-color: #ffffff;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="page-scroll" href="#tf-home"><img src="img/logo-smart_people1.png" /></a>
+                    <!--<a class="navbar-brand page-scroll" href="#tf-home">SMART PEOPLE</a>-->
+                </div>
 
-            echo'<!--Team Page [Equipa] -->';
-            echo'<div id = "tf-team" class = "text-center">';
-            echo'<div class = "overlay">';
-            echo'<div class = "container">';
-            echo'<div class = "section-title center">';
-            echo'<h2>A nossa <strong>equipa</strong></h2>';
-            echo'<div class = "line">';
-            echo'<hr>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div id = "team" class = "owl-carousel owl-theme row" style = "opacity: 1; display: block;">';
-            echo'<div class = "owl-wrapper-outer autoHeight" style = "height: 330px;">';
-            echo'<div class = "owl-wrapper" style = "width: 4560px; left: 0px; display: block; -webkit-transition: all 0ms ease; transition: all 0ms ease;">';
-            echo'<div class = "owl-item" style = "width: 285px;">';
-            echo'<div class = "item">';
-            echo'<div class = "thumbnail">';
-            echo'<img src = "img/vasco.jpg" alt = "Vasco Marques" class = "img-circle team-img">';
-            echo'<div class = "caption">';
-            echo'<h3>Vasco Marques</h3>';
-            echo'<p>Developer</p>';
-            echo'<p>Engenharia Inform√°tica</p>';
-            echo'<p>Do not seek to change what has come before. Seek to create that which has not.</p>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "owl-item" style = "width: 285px;"><div class = "item">';
-            echo'<div class = "thumbnail">';
-            echo'<img src = "img/raul.jpg" alt = "Raul Santos" class = "img-circle team-img">';
-            echo'<div class = "caption">';
-            echo'<h3>Raul Santos</h3>';
-            echo'<p>Developer</p>';
-            echo'<p>Engenharia Inform√°tica</p>';
-            echo'<p>Do not seek to change what has come before. Seek to create that which has not.</p>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "owl-item" style = "width: 285px;"><div class = "item">';
-            echo'<div class = "thumbnail">';
-            echo'<img src = "img/paulo.jpg" alt = "Paulo Santos" class = "img-circle team-img">';
-            echo'<div class = "caption">';
-            echo'<h3>Paulo Santos</h3>';
-            echo'<p>Manager</p>';
-            echo'<p>Engenharia Inform√°tica</p>';
-            echo'<p>Do not seek to change what has come before. Seek to create that which has not.</p>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<!--/Team Page [Equipa] -->';
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#tf-home" class="page-scroll">InÌcio</a></li>
+                        <li><a href="#tf-about" class="page-scroll">Sobre</a></li> <!-- #tf-about mudar para #inicio -->
+                        <li><a href="#tf-team" class="page-scroll">Equipa</a></li> <!-- #tf-about mudar para #equipa -->
+                        <li><a href="#tf-services" class="page-scroll">Login</a></li> <!-- #tf-about mudar para #login -->
+                        <!--<li><a href="#tf-contact" class="page-scroll">Login</a></li>  #tf-contact mudar para #login -->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
 
-            echo'<!--Login Section Form [Login] -->';
-            echo'<div id = "tf-services" class = "text-center">';
-            echo'<div class = "container">';
-            echo'<div class = "section-title center">';
-            echo'<h2>Entrar na <strong>Smart People</strong></h2>';
-            echo'<div class = "line">';
-            echo'<hr>';
-            echo'</div>';
-            echo'<div class = "clearfix"></div>';
-            echo'</div>';
+        <!-- Home Page [InÌcio] -->
+        <div id="tf-home" class="text-center">
+            <div class="overlay">
+                <div class="content">
+                    <h1>Bem vindo ao<strong><span class="color"> SmartPeople</span></strong></h1>
+                    <p class="lead">Seja o smarter mais fant·stico do planeta<strong> Linkedin </strong> e <strong>Facebook</strong></p>                    
+                </div>  
+            </div>
+        </div>
 
-            echo'<form>';
-            echo'<div class = "row">';
-            echo'<div class = "col-md-6">';
-            echo'<div class = "form-group">';
-            echo'<label for = "exampleInputEmail1">Email address</label>';
-            echo'<input type = "email" class = "form-control" id = "exampleInputEmail1" placeholder = "Email">';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "col-md-6">';
-            echo'<div class = "form-group">';
-            echo'<label for = "exampleInputPassword1">Password</label>';
-            echo'<input type = "password" class = "form-control" id = "exampleInputPassword1" placeholder = "Password">';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<button type = "submit" class = "btn tf-btn btn-default">Entrar</button>';
-            echo'</form>';
-            echo'<div class = "section-title center">';
-            echo'<div class = "clearfix"></div>';
-            echo'<div class = "section-title center">';
-            echo'<h2>OU <strong>Criar Conta</strong></h2>';
-            echo'<div class = "line">';
-            echo'<hr>';
-            echo'</div>';
-            echo'<div class = "clearfix"></div>';
-            echo'<div class = "row">';
-            echo'<div class = "section-title center">';
-            echo'<!--Large modal -->';
-            echo'<button type = "button" class = "btn btn-success btn-lg btn-default" data-toggle = "modal" data-target = "#myModal">REGISTE-SE AQUI!</button>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'<!--/Login Form [Login] -->';
+        <!-- About Us Page [Sobre] -->
+        <div id="tf-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/social.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-text">
+                            <div class="section-title">
+                                <h4>Sobre nÛs</h4>
+                                <h2>O que È o<strong> SmartPeople?</strong></h2>
+                                <hr>
+                                <div class="clearfix"></div>
+                            </div>
+                            <p class="intro">… um agregador tem·tico de redes sociais(Linkedin, Facebook) que lhe permite tirar partido de uma sÛ rede. O utilizador da Smartpeole est· na sua rede social(smartpeolple) e intervÍm e visualiza as outras redes sociais de uma maneira pr·tica, simples e eficiente.</p>
+                            <ul class="about-list">
+                                <li>
+                                    <span class="fa fa-thumbs-o-up"></span>
+                                    <strong>Likes</strong> - <em>faÁa likes nas redes sociais (Linkedin, Facebook)</em>
+                                </li>
+                                <li>
+                                    <span class="fa fa-comment-o"></span>
+                                    <strong>Coment·rios</strong> - <em>faÁa coment·rios nas redes sociais (Linkedin, Facebook)</em>
+                                </li>
+                                <li>
+                                    <span class="fa fa-share-square-o"></span>
+                                    <strong>Partilhas</strong> - <em>faÁa partilhas nas redes sociais (Linkedin, Facebook)</em>
+                                </li>
+                                <li>
+                                    <span class="fa fa-mobile"></span>
+                                    <strong>AplicaÁ„o Mobile</strong> - <em>faÁa o download da nossa aplicaÁ„o <a href="#">aqui</a>.</em>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            echo'<!--Modal -->';
-            echo'<div class = "modal fade" id = "myModal" tabindex = "-1" role = "dialog" aria-labelledby = "myModalLabel" aria-hidden = "true">';
-            echo'<div class = "modal-dialog">';
-            echo'<div class = "modal-content">';
-            echo'<div class = "modal-header">';
-            echo'<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close"><span aria-hidden = "true">&times;';
-            echo'</span></button>';
-            echo'<h4 class = "modal-title" id = "myModalLabel">Registo</h4>';
-            echo'</div>';
-            echo'<div class = "modal-body">';
-            echo'<form role = "form">';
-            echo'<div class = "well well-sm"><strong><span></span> Preencha todos os campos.</strong></div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "text" class = "form-control" name = "InputName" id = "InputName" placeholder = "Nome" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-user"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "email" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Email SmartPeople" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-envelope"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "password" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Password SmartPeople" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-lock"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "email" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Email Facebook" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-envelope"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "password" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Password Facebook" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-lock"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "email" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Email Linkedin" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-envelope"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<input type = "password" class = "form-control" id = "InputEmailFirst" name = "InputEmail" placeholder = "Password Linkedin" required>';
-            echo'<span class = "input-group-addon"><span class = "glyphicon glyphicon-lock"></span></span>';
-            echo'</div>';
-            echo'</div>';
-            echo'<div class = "form-group">';
-            echo'<div class = "input-group">';
-            echo'<label for = "InputEmail">Escolha a sua fotografia e submete-a: </label><p></p>';
-            echo'<span class = "btn btn-success fileinput-button dz-clickable">';
-            echo'<i class = "glyphicon glyphicon-plus"></i>';
-            echo'<span>Adicionar foto</span>';
-            echo'</span>';
-            echo'</div>';
-            echo'</div>';
-            echo'</form>';
-            echo'<div class = "modal-footer">';
-            echo'<button type = "button" class = "btn btn-default" data-dismiss = "modal">Fechar</button>';
-            echo'<input type = "submit" name = "submit" id = "submit" value = "Submeter" class = "btn btn-primary">';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
-            echo'</div>';
+        <!-- Team Page [Equipa] -->
+        <div id="tf-team" class="text-center">
+            <div class="overlay">
+                <div class="container">
+                    <div class="section-title center">
+                        <h2>A nossa <strong>equipa</strong></h2>
+                        <div class="line">
+                            <hr>
+                        </div>
+                    </div>
+                    <div id="team" class="owl-carousel owl-theme row" style="opacity: 1; display: block;">                    
+                        <div class="owl-wrapper-outer autoHeight" style="height: 330px;">
+                            <div class="owl-wrapper" style="width: 4560px; left: 0px; display: block; -webkit-transition: all 0ms ease; transition: all 0ms ease;">
+                                <div class="owl-item" style="width: 285px;">
+                                    <div class="item">
+                                        <div class="thumbnail">
+                                            <img src="img/vasco.jpg" alt="Vasco Marques" class="img-circle team-img">
+                                            <div class="caption">
+                                                <h3>Vasco Marques</h3>
+                                                <p>Developer</p>
+                                                <p>Engenharia Inform·tica</p>
+                                                <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 285px;"><div class="item">
+                                <div class="thumbnail">
+                                    <img src="img/raul.jpg" alt="Raul Santos" class="img-circle team-img">
+                                    <div class="caption">
+                                        <h3>Raul Santos</h3>
+                                        <p>Developer</p>
+                                        <p>Engenharia Inform·tica</p>
+                                        <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="owl-item" style="width: 285px;"><div class="item">
+                                <div class="thumbnail">
+                                    <img src="img/paulo.jpg" alt="Paulo Santos" class="img-circle team-img">
+                                    <div class="caption">
+                                        <h3>Paulo Santos</h3>
+                                        <p>Manager</p>
+                                        <p>Engenharia Inform·tica</p>
+                                        <p>Do not seek to change what has come before. Seek to create that which has not.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Team Page [Equipa] -->
 
-            echo'<!--Footer [Rodap√©] -->';
-            echo'<nav id = "footer">';
-            echo'<div class = "container">';
-            echo'<div class = "pull-left fnav">';
-            echo'<p>COPYRIGHT ¬© 2015. Designed by <a href = "#">Smart People</a> and Coded by <a href = "#">Vasco Marques & Raul Santos</a></p>';
-            echo'</div>';
-            echo'<div class = "pull-right fnav">';
-            echo'<ul class = "footer-social">';
-            echo'<li><a href = "https://www.facebook.com/SmartPeopleIPT?ref=hl"><i class = "fa fa-facebook"></i></a></li>';
-            echo'<li><a href = "#linkedin"><i class = "fa fa-linkedin"></i></a></li>';
-            echo'<li><a href = "#google-plus"><i class = "fa fa-google-plus"></i></a></li>';
-            echo'<li><a href = "#twitter"><i class = "fa fa-twitter"></i></a></li>';
-            echo'</ul>';
-            echo'</div>';
-            echo'</div>';
-            echo'</nav>';
-        } else {
-            //caso n„o esteja autenticado
-            echo 'Esta È uma ·rea reservada a utilizadores registados.';
-        }
-        ?>
+        <!-- Login Section Form [Login] -->
+        <div id="tf-services" class="text-center">
+            <div class="container">
+                <div class="section-title center">
+                    <h2>Entrar na <strong>Smart People</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <?php
+                include ("config.php");
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // username and password sent from Form
+                    $mailsmartpeople = mysqli_real_escape_string($db, $_POST['mailsmartpeople']);
+                    $passwordsmartpeople = mysqli_real_escape_string($db, $_POST['passwordsmartpeople']);
+
+                    $sql = "SELECT mailsmartpeople FROM smartpeople WHERE mailsmartpeople='$mailsmartpeople' and passwordsmartpeople='$passwordsmartpeople'";
+                    $result = mysqli_query($db, $sql);
+                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                    $active = $row['active'];
+                    $count = mysqli_num_rows($result);
+
+
+                    // If result matched $myusername and $mypassword, table row must be 1 row
+                    if ($count == 1) {
+                        session_register("mailsmartpeople");
+                        $_SESSION['login_user'] = $mailsmartpeople;
+
+                        header("location: bem_vindo.php");
+                    } else {
+                        $error = "O seu email e password estao incorrectos!";
+                    }
+                }
+                ?>
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="mailsmartpeople" name="mailsmartpeople" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="passwordsmartpeople" name="passwordsmartpeople" placeholder="Password">
+                            </div>
+                        </div>
+                    </div>                           
+                    <input type="submit" value=" Submit " class="btn tf-btn btn-default"/>
+                    <!--<button type="submit" class="btn tf-btn btn-default">Entrar</button>-->
+                </form>
+                <div class="section-title center">
+                    <div class="clearfix"></div>
+                    <div class="section-title center">
+                        <h2>OU <strong>Criar Conta</strong></h2>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="section-title center">
+                                <!--<button type="button" class="btn btn-success btn-lg btn-default" onclick="window.location.href = './registar.html'">REGISTE-SE AQUI!</button>-->
+                                <!-- Large modal -->
+                                <button type="button" class="btn btn-success btn-lg btn-default" data-toggle="modal" data-target="#myModal">REGISTE-SE AQUI!</button>
+                            </div>
+                        </div>  
+                    </div>
+                </div>            
+            </div>          
+        </div>
+        <!-- /Login Form [Login] -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Registo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form_registar" action="registar.php" method="post">                   
+                            <div class="well well-sm"><strong><span></span> Preencha todos os campos.</strong></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="mailsmartpeople" name="mailsmartpeople" placeholder="Email SmartPeople" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="passwordsmartpeople" name="passwordsmartpeople" placeholder="Password SmartPeople" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="mailfacebook" name="mailfacebook" placeholder="Email Facebook" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="passwordfacebook" name="passwordfacebook" placeholder="Password Facebook" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="maillinkdin" name="maillinkdin" placeholder="Email Linkedin" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="passwordlinkdin" name="passwordlinkdin" placeholder="Password Linkedin" required>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                </div>
+                            </div>             
+                            <div class="form-group">                                
+                                <div class="input-group">
+                                    <label for="InputEmail">Escolha a sua fotografia e submete-a: </label><p></p>
+                                    <span class="btn btn-success fileinput-button dz-clickable">
+                                        <i class="glyphicon glyphicon-plus"></i>
+                                        <span>Adicionar foto</span>                                        
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                <input type="submit" name="add" id="add" value="Registar" class="btn btn-primary">                        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer [RodapÈ] -->
+        <nav id="footer">
+            <div class="container">
+                <div class="pull-left fnav">
+                    <p>COPYRIGHT © 2015. Designed by <a href="#">Smart People</a> and Coded by <a href="#">Vasco Marques & Raul Santos</a></p>
+                </div>
+                <div class="pull-right fnav">
+                    <ul class="footer-social">
+                        <li><a href="https://www.facebook.com/SmartPeopleIPT?ref=hl"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#google-plus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#twitter"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
