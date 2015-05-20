@@ -36,9 +36,9 @@ if (isset($_POST['add'])) {
         die('Could not enter data: ' . mysql_error());
     }
 
-    header("Location: http://localhost/index.html");
+    header("Location: http://localhost/versaoteste1/index.html");
     mysql_close($conn);
-}else{
-    header("Email's e passwords incorrectos!");
+    
 }
+
 ?>
