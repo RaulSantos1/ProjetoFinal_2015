@@ -20,7 +20,7 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
     </head>
     <body>
         <?php
-        $username_cookie = $_COOKIE['mailsmartpeople'];
+        $username_cookie = $_SESSION['mailsmartpeople'];
         if (isset($username_cookie)) {
             echo"<b>Bem-Vindo</b>, $username_cookie <br>";
             echo"Estas informações <font color='red'>PODEM</font> ser visualizadas por si";
