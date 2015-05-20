@@ -29,7 +29,7 @@
         if (isset($_SESSION['mailsmartpeople']) and $_SESSION['role'] == 2) {
             echo '<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">';
             echo '<h1 class="page-header">Início</h1>';
-            echo ' Olá, ' . $_SESSION['email'] . '<br/>';
+            echo ' Olá, ' . $_SESSION['mailsmartpeople'] . '<br/>';
             echo '<a href="logout.php"> Logout</a>';
             echo '</div>';           
         } else {
