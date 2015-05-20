@@ -1,6 +1,6 @@
 <?php
 // incluir o arquivo de ligação com a base de dados
-$connect = mysql_connect('localhost','adminsmartpeople','smartpeople');
+$connect = mysql_connect('localhost', 'adminsmartpeople', 'smartpeople');
 $db = mysql_select_db('smartpeople');
 
 // busca de dados em ordem decrescente (entrada mais recente primeiro)
@@ -33,4 +33,5 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
         ?>
 
 
-    </body></html>
+    </body>
+</html>
