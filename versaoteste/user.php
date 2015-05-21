@@ -18,10 +18,9 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
     </head>
     <body>
         <?php
-        //Se existir autenticação
-        if (isset($_SESSION['mailsmartpeople']) and $_SESSION['role'] == 1) {
-            $username_cookie = $_COOKIE['mailsmartpeople'];
-            if (isset($username_cookie)) {
+        //Se existir autenticação        
+            $username_cookie = $_SESSION['mailsmartpeople'];
+            if (isset($username_cookie)==1) {
                 echo"<b>Bem-Vindo</b>, $username_cookie <br>";
                 echo"Estas informações <font color='red'>PODEM</font> ser visualizadas por si";
                 echo '<br><a href="logout.php"> Logout</a>';
@@ -30,9 +29,6 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
                 echo"Estas informações <font color='red'>NÃO PODEM</font> ser acedidas por si";
                 echo"<br><a href='login.html'>Faça Login</a> Para ler o conteúdo";
             }
-        } else {
-            //Caso não esteja autenticado
-            echo 'O conteúdo que pretende visualizar está restrito.';
         }
         ?>
 
