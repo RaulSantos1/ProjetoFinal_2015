@@ -1,6 +1,6 @@
 <?php
 // incluir o arquivo de ligação com a base de dados
-$connect = mysql_connect('localhost','adminsmartpeople','smartpeople');
+$connect = mysql_connect('localhost', 'adminsmartpeople', 'smartpeople');
 $db = mysql_select_db('smartpeople');
 
 // busca de dados em ordem decrescente (entrada mais recente primeiro)
@@ -18,15 +18,21 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
     </head>
     <body>
         <?php
-        $username_cookie = $_COOKIE['mailsmartpeople'];
-        if (isset($username_cookie)) {
-            echo"<b>Bem-Vindo</b>, $username_cookie <br>";
-            echo"Estas informações <font color='red'>PODEM</font> ser visualizadas por si";
-            echo '<br><a href="logout.php"> Logout</a>';
+        //Se existir autenticação
+        if (isset($_SESSION['mailsmartpeople']) and $_SESSION['role'] == 1) {
+            $username_cookie = $_COOKIE['mailsmartpeople'];
+            if (isset($username_cookie)) {
+                echo"<b>Bem-Vindo</b>, $username_cookie <br>";
+                echo"Estas informações <font color='red'>PODEM</font> ser visualizadas por si";
+                echo '<br><a href="logout.php"> Logout</a>';
+            } else {
+                echo"Bem-Vindo, convidado <br>";
+                echo"Estas informações <font color='red'>NÃO PODEM</font> ser acedidas por si";
+                echo"<br><a href='login.html'>Faça Login</a> Para ler o conteúdo";
+            }
         } else {
-            echo"Bem-Vindo, convidado <br>";
-            echo"Estas informações <font color='red'>NÃO PODEM</font> ser acedidas por si";
-            echo"<br><a href='login.html'>Faça Login</a> Para ler o conteúdo";
+            //Caso não esteja autenticado
+            echo 'O conteúdo que pretende visualizar está restrito.';
         }
         ?>
 
