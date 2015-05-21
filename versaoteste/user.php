@@ -20,7 +20,7 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
         <?php
         //Se existir autenticação        
         //    $username_cookie = $_SESSION['mailsmartpeople'];
-            if (isset($_SESSION['mailsmartpeople']) and $_SESSION['role']==1) {
+            if (isset($_SESSION['mailsmartpeople']) and $_SESSION['passwordsmartpeople']==1) {
                 echo"<b>Bem-Vindo</b>," . $_SESSION['mailsmartpeople']. "<br>";
                 echo"Estas informações <font color='red'>PODEM</font> ser visualizadas por si";
                 echo '<br><a href="logout.php"> Logout</a>';
