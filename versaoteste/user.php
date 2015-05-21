@@ -29,7 +29,7 @@ $result = mysql_query("SELECT * FROM registos ORDER BY id DESC");
                 echo"Estas informações <font color='red'>NÃO PODEM</font> ser acedidas por si";
                 echo"<br><a href='login.html'>Faça Login</a> Para ler o conteúdo";
             }
-        }
+        
         ?>
 
 
