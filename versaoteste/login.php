@@ -1,24 +1,27 @@
 <?php
-$connect = mysql_connect('localhost','adminsmartpeople','smartpeople');
-$db = mysql_select_db('smartpeople');
-$mailsmartpeople = $_POST['mailsmartpeople'];
-$entrar = $_POST['entrar'];
-$passwordsmartpeople = $_POST['passwordsmartpeople'];
 
-if (isset($entrar)) {
-	$verifica = mysql_query("SELECT * FROM registos WHERE mailsmartpeople = '$mailsmartpeople' AND passwordsmartpeople = '$passwordsmartpeople'") or die ("erro ao selecionar");
-	
-	if (mysql_num_rows($verifica)<=0) {
-		echo"<script language='javascript' type='text/javascript'>
-	alert('Login e/ou senha incorretos');window.location.href='index.html';
-</script>";
-die();
-	}
-	else
-	{
-		setcookie("mailsmartpeople",$mailsmartpeople);
-		header("Location: user.php");
-	}
+session_start();//session starts here
+
+include("./db_conection.php");
+
+if (isset($_POST['entrar'])) {
+    $mailsmartpeople=$_POST['mailsmartpeople'];
+    $passwordsmartpeople=$_POST['passwordsmartpeople'];
+
+    $check_user="select * from registos WHERE mailsmartpeople='$mailsmartpeople' AND passwordsmartpeople='$passwordsmartpeople'";
+
+    $run=mysqli_query($dbcon,$check_user);
+
+    if(mysqli_num_rows($run))
+    {
+        echo "<script>window.open('user.php','_self')</script>";
+
+        $_SESSION['mailsmartpeople']=$mailsmartpeople;//here session is used and value of $user_email store in $_SESSION.
+
+    }
+    else
+    {
+        echo "<script>alert('Email or password is incorrect!')</script>";
+    }
 }
-
 ?>
