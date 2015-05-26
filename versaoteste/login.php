@@ -10,7 +10,7 @@ if (isset($_POST['entrar'])) {
 
     $check_user="select * from registos WHERE mailsmartpeople='$mailsmartpeople' AND passwordsmartpeople='$passwordsmartpeople'";
 
-    $run=mysqli_query($dbcon,$check_user);
+    $run=mysqli_query($dbconnect,$check_user);
 
     if(mysqli_num_rows($run))
     {
