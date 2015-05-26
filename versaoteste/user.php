@@ -18,13 +18,13 @@ if(!$_SESSION['mailsmartpeople'])
 </head>
 
 <body>
-<h1>Welcome</h1><br>
+<h1>Bem vindo ao SmartPeople</h1><br>
 <?php
 echo $_SESSION['mailsmartpeople'];
 ?>
 
 
-<h1><a href="logout.php">Logout here</a> </h1>
+<h1><a href="logout.php">SAIR</a> </h1>
 
 
 </body>
